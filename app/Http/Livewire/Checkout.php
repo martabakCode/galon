@@ -215,7 +215,6 @@ class Checkout extends Component
     {
         $this->total = Cart::total();
         $this->content = Cart::content();
-        dd($this->shipping_cost);
         $this->orderTotal = $this->total + $this->shipping_cost + $this->tax;
     }
 }

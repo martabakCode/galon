@@ -1804,9 +1804,6 @@ select {
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
-.col-span-2 {
-  grid-column: span 2 / span 2;
-}
 .col-span-3 {
   grid-column: span 3 / span 3;
 }
@@ -2103,9 +2100,6 @@ select {
 .h-6 {
   height: 1.5rem;
 }
-.h-60 {
-  height: 15rem;
-}
 .h-64 {
   height: 16rem;
 }
@@ -2350,9 +2344,6 @@ select {
      -moz-user-select: none;
           user-select: none;
 }
-.resize-none {
-  resize: none;
-}
 .list-inside {
   list-style-position: inside;
 }
@@ -2381,6 +2372,9 @@ select {
 }
 .grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.grid-cols-8 {
+  grid-template-columns: repeat(8, minmax(0, 1fr));
 }
 .flex-row {
   flex-direction: row;

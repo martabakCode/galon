@@ -1,4 +1,4 @@
-<div x-data="{ storeMenu: false, settingsMenu: false, blogMenu: false }">
+<div x-data="{ storeMenu: false, settingsMenu: false }">
     <nav class="flex-1 px-2 py-4 space-y-1">
         <a href="{{ route('dashboard') }}"
             class="flex items-center px-2 py-2 text-sm font-medium rounded-md {!! Route::is('dashboard') ? 'text-white bg-cyan-800 group' : 'text-cyan-100' !!} hover:bg-cyan-600 hover:text-white group">
@@ -164,52 +164,6 @@
             </svg>
             {{ __('Pages') }}
         </a> --}}
-        <a href="#" x-on:click="blogMenu = ! blogMenu"
-            class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-6 rounded-md text-cyan-100 hover:bg-cyan-600 hover:text-white group">
-            <div class="flex">
-                <svg class="flex-shrink-0 w-6 h-6 rtl:ml-3 ltr:mr-3 text-cyan-100 group-hover:text-cyan-200"
-                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-                {{ __('Blog') }}
-            </div>
-            <svg x-show="!blogMenu" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20"
-                fill="currentColor">
-                <path fill-rule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clip-rule="evenodd" />
-            </svg>
-            <svg x-show="blogMenu" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20"
-                fill="currentColor">
-                <path fill-rule="evenodd"
-                    d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
-                    clip-rule="evenodd" />
-            </svg>
-        </a>
-        <ul x-show="blogMenu" class="text-sm text-cyan-100" :class="blogMenu ? 'rounded-md bg-cyan-600' : ''">
-            <li class="px-2 py-2 pr-10 hover:bg-cyan-500 hover:rounded-md hover:text-white">
-                <a href="{{ route('blog.posts') }}" class="flex">
-                    <svg class="flex-shrink-0 w-6 h-6 rtl:ml-3 ltr:mr-3 text-cyan-100 group-hover:text-cyan-200"
-                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                    </svg>
-                    {{ __('Posts') }}
-                </a>
-
-            </li>
-            <li class="px-2 py-2 pr-10 hover:bg-cyan-500 hover:rounded-md hover:text-white">
-                <a href="{{ route('blog.categories') }}" class="flex">
-                    <svg class="flex-shrink-0 w-6 h-6 rtl:ml-3 ltr:mr-3 text-cyan-100 group-hover:text-cyan-200"
-                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                    </svg>
-                    {{ __('Categories') }}
-                </a>
-            </li>
-        </ul>
         <a href="#" x-on:click="settingsMenu = ! settingsMenu"
             class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-6 rounded-md text-cyan-100 hover:bg-cyan-600 hover:text-white group">
             <!-- Heroicon name: outline/users -->

@@ -15,9 +15,6 @@
                     <a href="{{ route('brands') }}" class="hover:underline"> {{ __('Brands') }} </a>
                 </div>
                 <div class="px-5 py-2">
-                    <a href="{{ route('blog') }}" class="hover:underline"> {{ __('News') }} </a>
-                </div>
-                <div class="px-5 py-2">
                     <a href="{{ route('pages.about') }}" class="hover:underline"> {{ __('About') }} </a>
                 </div>
                 <div class="px-5 py-2">

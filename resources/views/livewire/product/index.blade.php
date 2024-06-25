@@ -90,15 +90,7 @@
                                         </svg>
                                     </button>
                                 @endif
-                            @else
-                                <button type="button" wire:click="AddToFavourite({{ $product->id }})"
-                                    class="relative inline-flex items-center border border-gray-300 bg-white px-4 py-1 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 ltr:rounded-l-md rtl:rounded-r-md">
-                                    <svg class="h-6 w-6 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                                    </svg>
-                                </button>
+
                             @endauth
                             @if ($product->stock > 0)
                                 <button type="button" wire:click="addToCart({{ $product->id }})"
@@ -122,9 +114,6 @@
                                 </div>
                             @endif
                         </span>
-                        <div class="mt-5 border-t border-gray-200 pt-5">
-                            <x-share :data="route('product.view', $product->getTranslation('slug', App::getLocale()))" />
-                        </div>
                     </form>
 
                     {{-- @livewire('product.additional-info') --}}

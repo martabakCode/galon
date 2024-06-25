@@ -34,24 +34,45 @@
                         <h4 class="sr-only">Status</h4>
                         <p class="text-sm font-medium text-gray-900">
                             {{ __($order->status->name) }}
-                            <time
-                                datetime="{{ $order->updated_at->format('d-m-Y') }}">{{ $order->updated_at->format('F d, Y') }}
+                            <time datetime="{{ $order->updated_at->format('Y-m-d') }}">
+                                {{ $order->updated_at->format('F d, Y') }}
                             </time>
                         </p>
                         <div class="mt-6" aria-hidden="true">
                             <div class="overflow-hidden bg-gray-200 rounded-full">
-                                <div class="h-2 bg-indigo-600 rounded-full" style="width: calc((1 * 2 + 1) / 8 * 100%)">
+                                <div class="h-2 bg-indigo-600 rounded-full" style="width: calc(({{ $order->status->id }} / 10) * 100%)">
                                 </div>
                             </div>
-                            <div class="hidden grid-cols-4 mt-6 text-sm font-medium text-gray-600 sm:grid">
-                                <div class="text-indigo-600">{{ __('Order placed') }}</div>
-                                <div class="text-center text-indigo-600">{{ __('Processing') }}</div>
-                                <div class="text-center">{{ __('Shipped') }}</div>
-                                <div class="text-right">{{ __('Delivered') }}</div>
+                            <div class="grid grid-cols-8 mt-6 text-sm font-medium text-gray-600 sm:grid">
+                                <div class="{{ $order->status->id >= 1 ? 'text-indigo-600' : '' }} text-center">
+                                    {{ __('Pending') }}
+                                </div>
+                                <div class="{{ $order->status->id >= 2 ? 'text-indigo-600' : '' }} text-center">
+                                    {{ __('Paid') }}
+                                </div>
+                                <div class="{{ $order->status->id >= 3 ? 'text-indigo-600' : '' }} text-center">
+                                    {{ __('Processing') }}
+                                </div>
+                                <div class="{{ $order->status->id >= 4 ? 'text-indigo-600' : '' }} text-center">
+                                    {{ __('Shipped') }}
+                                </div>
+                                <div class="{{ $order->status->id == 5 ? 'text-yellow-600' : '' }} text-center">
+                                    {{ __('Hold') }}
+                                </div>
+                                <div class="{{ $order->status->id == 6 ? 'text-red-600' : '' }} text-center">
+                                    {{ __('Cancelled') }}
+                                </div>
+                                <div class="{{ $order->status->id >= 9 ? 'text-indigo-600' : '' }} text-center">
+                                    {{ __('Deliverd') }}
+                                </div>
+                                <div class="{{ $order->status->id >= 10 ? 'text-indigo-600' : '' }} text-center">
+                                    {{ __('Completed') }}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
 
                 <div class="bg-white border-t border-b border-gray-200 shadow-sm sm:border sm:rounded-lg">
                     <div class="px-4 py-6 sm:px-6 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:p-8 lg:gap-y-8">

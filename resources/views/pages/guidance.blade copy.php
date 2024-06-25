@@ -197,16 +197,6 @@
                             class="group text-gray-white ml-2 flex items-center rounded-md py-2 px-2 text-sm font-medium">
                             Pages
                         </a>
-                        <a href="#blog-cats" x-on:click="item = 10"
-                            :class="item == 10 ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'"
-                            class="group text-gray-white ml-2 flex items-center rounded-md py-2 px-2 text-sm font-medium">
-                            Blog categories
-                        </a>
-                        <a href="#blog-posts" x-on:click="item = 11"
-                            :class="item == 11 ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'"
-                            class="group text-gray-white ml-2 flex items-center rounded-md py-2 px-2 text-sm font-medium">
-                            Blog posts
-                        </a>
                         <a href="#developers" x-on:click="item = 12"
                             :class="item == 12 ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'"
                             class="group text-gray-white ml-2 flex items-center rounded-md py-2 px-2 text-sm font-medium">

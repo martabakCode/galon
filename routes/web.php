@@ -49,10 +49,6 @@ Route::group(
         Route::get('brand/{slug}', \App\Http\Livewire\Brands::class)->name('brand');
         Route::get('cart', \App\Http\Livewire\ShoppingCart::class)->name('shopping.cart');
 
-
-        Route::get('blog', [\App\Http\Controllers\BlogController::class, 'index'])->name('blog');
-        Route::get('post/{slug}', [\App\Http\Controllers\BlogController::class, 'show'])->name('post.view');
-
         Route::get('about', function () {
             return view('pages.about');
         })->name('pages.about');
@@ -89,10 +85,6 @@ Route::middleware([
     Route::get('/admin/products', \App\Http\Livewire\App\Products\Products::class)->name('app.products');
     Route::get('/admin/add/product', \App\Http\Livewire\App\Products\AddProduct::class)->name('app.add.product');
     Route::get('/admin/edit/product/{id}', \App\Http\Livewire\App\Products\EditProduct::class)->name('app.edit.product');
-    Route::get('admin/blog/posts', \App\Http\Livewire\App\Blog\Posts::class)->name('blog.posts');
-    Route::get('admin/blog/add/post', \App\Http\Livewire\App\Blog\AddPost::class)->name('blog.add.post');
-    Route::get('admin/blog/edit/post/{id}', \App\Http\Livewire\App\Blog\EditPost::class)->name('blog.edit.post');
-    Route::get('admin/blog/categories', \App\Http\Livewire\App\Blog\Categories::class)->name('blog.categories');
     Route::get('admin/settings/general', \App\Http\Livewire\App\Settings\General::class)->name('settings.general');
     Route::get('admin/settings/roles', \App\Http\Livewire\App\Settings\UserRoles::class)->name('settings.roles');
     Route::get('admin/settings/appearance', \App\Http\Livewire\App\Settings\Appearance::class)->name('settings.appearance');
@@ -117,9 +109,8 @@ Route::middleware([
 ])->group(function () {
     Route::get('checkout', \App\Http\Livewire\Checkout::class)->name('checkout');
     Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'customer'])->name('customer.dashboard');
-    Route::get('customer/messages', \App\Http\Livewire\Customer\MyMessages::class)->name('my.messages');
     Route::get('customer/favourites', \App\Http\Livewire\Customer\MyFavourites::class)->name('my.favourites');
-
+    Route::get('customer/reviews', \App\Http\Livewire\Customer\MyReviews::class)->name('my.reviews');
     Route::get('customer/orders', \App\Http\Livewire\Customer\MyOrders::class)->name('my.orders');
     Route::get('customer/order/{code}', \App\Http\Livewire\Customer\MyOrder::class)->name('my.order.view');
 

@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\BlogPostTag;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -27,9 +26,6 @@ class DatabaseSeeder extends Seeder
             UserFavouritesSeeder::class,
             MediaSeeder::class,
             SettingsSeeder::class,
-            BlogCategorySeeder::class,
-            BlogSeeder::class,
-            BlogTagSeeder::class,
             StatusSeeder::class,
             ShippingSeeder::class,
             PaymentSeeder::class,
@@ -39,6 +35,5 @@ class DatabaseSeeder extends Seeder
             ContactsSeeder::class,
             MessageSeeder::class,
         ]);
-        BlogPostTag::factory(10)->create();
     }
 }

@@ -2,7 +2,7 @@
     <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
         <h2 class="text-base font-semibold tracking-wider text-cyan-600 uppercase">{{ __('Established in 2020') }}</h2>
         <p class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-            {{ __('All your water needs in one place') }}
+            {{ __('Made by') }}
         </p>
         <p class="mt-5 max-w-prose mx-auto text-xl text-gray-500">
             {{ __('Providing clean, safe, and reliable water delivery services.') }}
@@ -12,54 +12,27 @@
                 <div class="pt-6">
                     <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
                         <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                            {{ __('Leading company') }}</h3>
+                            {{ __('Nama Pertama') }}</h3>
                         <p class="mt-5 text-base text-gray-500">
-                            {{ __('A leading company in water delivery and distribution.') }}
+                            {{ __('NIM : JSAKLDAD') }}
                         </p>
                     </div>
                 </div>
                 <div class="pt-6">
                     <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
                         <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                            {{ __('Quality water') }}</h3>
+                            {{ __('Nama Kedua') }}</h3>
                         <p class="mt-5 text-base text-gray-500">
-                            {{ __('Providing high-quality, purified water.') }}
+                            {{ __('NIM : EWJDOKSAD') }}
                         </p>
                     </div>
                 </div>
                 <div class="pt-6">
                     <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
                         <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                            {{ __('Nationwide service') }}</h3>
+                            {{ __('Nama Ketiga') }}</h3>
                         <p class="mt-5 text-base text-gray-500">
-                            {{ __('Serving customers across the country.') }}
-                        </p>
-                    </div>
-                </div>
-                <div class="pt-6">
-                    <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
-                        <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                            {{ __('High experience') }}</h3>
-                        <p class="mt-5 text-base text-gray-500">
-                            {{ __('Years of experience in the water delivery industry.') }}
-                        </p>
-                    </div>
-                </div>
-                <div class="pt-6">
-                    <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
-                        <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                            {{ __('Multiple branches') }}</h3>
-                        <p class="mt-5 text-base text-gray-500">
-                            {{ __('Branches in multiple cities for your convenience.') }}
-                        </p>
-                    </div>
-                </div>
-                <div class="pt-6">
-                    <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
-                        <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                            {{ __('Customer satisfaction') }}</h3>
-                        <p class="mt-5 text-base text-gray-500">
-                            {{ __('Putting our customers first in every delivery.') }}
+                            {{ __('NIM : 212WDNSA') }}
                         </p>
                     </div>
                 </div>
