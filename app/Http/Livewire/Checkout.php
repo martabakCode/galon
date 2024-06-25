@@ -132,6 +132,8 @@ class Checkout extends Component
             'shipping_address' => json_encode($address),
             'shipping_id' => $this->sh_method,
             'payment_id' => $this->pa_method,
+            'payment_cost' =>  $this->total,
+            'shipping_cost' =>  $this->shipping_cost,
             'subtotal' => $this->total,
             'tax' => $this->tax,
             'total' => $this->orderTotal,
@@ -213,6 +215,7 @@ class Checkout extends Component
     {
         $this->total = Cart::total();
         $this->content = Cart::content();
+        dd($this->shipping_cost);
         $this->orderTotal = $this->total + $this->shipping_cost + $this->tax;
     }
 }

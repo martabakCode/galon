@@ -48,7 +48,7 @@ Route::group(
         Route::get('brands', \App\Http\Livewire\Brands::class)->name('brands');
         Route::get('brand/{slug}', \App\Http\Livewire\Brands::class)->name('brand');
         Route::get('cart', \App\Http\Livewire\ShoppingCart::class)->name('shopping.cart');
-        Route::get('checkout', \App\Http\Livewire\Checkout::class)->name('checkout');
+
 
         Route::get('blog', [\App\Http\Controllers\BlogController::class, 'index'])->name('blog');
         Route::get('post/{slug}', [\App\Http\Controllers\BlogController::class, 'show'])->name('post.view');
@@ -115,6 +115,7 @@ Route::middleware([
     'verified',
     'role:Customer',
 ])->group(function () {
+    Route::get('checkout', \App\Http\Livewire\Checkout::class)->name('checkout');
     Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'customer'])->name('customer.dashboard');
     Route::get('customer/messages', \App\Http\Livewire\Customer\MyMessages::class)->name('my.messages');
     Route::get('customer/favourites', \App\Http\Livewire\Customer\MyFavourites::class)->name('my.favourites');
