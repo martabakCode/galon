@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Http\Livewire;
+
+use App\Models\UserFavourite;
+use Livewire\Component;
+
+class Favourites extends Component
+{
+    public $favourites;
+    public function render()
+    {
+        if (Auth()->id()) {
+            $this->favourites = UserFavourite::where('user_id', Auth()->id())->get();
+        }
+
+        return view('livewire.favourites')->layout('layouts.guest');
+    }
+
+    public function removeFavourite($id)
+    {
+        UserFavourite::where('user_id', Auth()->id())->where('id', $id)->delete();
+        $this->emitTo('favourites-count', 'RefreshFavouriteCount');
+    }
+}
